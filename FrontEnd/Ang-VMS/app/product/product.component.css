@@ -1,0 +1,16 @@
+.card-body {
+
+    margin-left: 35%;
+
+
+}
+
+input {
+    width: 65%;
+}
+
+.card {
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.25);
+    width: 90%;
+    margin-left: 5%;
+}

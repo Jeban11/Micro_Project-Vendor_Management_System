@@ -1,0 +1,133 @@
+<div class="card">
+    <div class="card-header">
+        <h4 align="center">Add Contract Details</h4>
+    </div>
+    <div class="card-body">
+
+        <table>
+            <td class="col-8">
+
+                <form [formGroup]="myForm" id="Form">
+                    <div class="inputs">
+
+                        <div class="form-group row">
+                            <label for="studentemsection">Vendor
+                                ID</label>
+                            <input type="text" class="form-control" aria-describedby="addon-wrapping"
+                                formControlName="id" name="id">
+                        </div>
+                        <div *ngIf="myForm.get('id')!.touched && myForm.get('id')!.invalid">
+                            <div *ngIf="myForm.get('id')!.hasError('required')">
+
+                                <font color="red">Vendor ID is Required</font>
+                            </div>
+                            <div *ngIf="myForm.get('id')!.hasError('pattern')">
+
+                                <font color="red">Invalid Id</font>
+                            </div>
+                        </div>
+
+
+                        <div class="form-group row">
+                            <label for="studentemsection">Vendor
+                                Name</label>
+                            <input type="text" class="form-control" aria-describedby="addon-wrapping"
+                                formControlName="name" name="name">
+                        </div>
+                        <div *ngIf="myForm.get('name')!.touched && myForm.get('name')!.invalid">
+                            <div *ngIf="myForm.get('name')!.hasError('required')">
+                                <font color="red"> Name is Required</font>
+                            </div>
+                            <div *ngIf="myForm.get('name')!.hasError('pattern')">
+                                <font color="red">Invalid vendor Name </font>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="studentemsection">Contract Number
+                            </label>
+                            <input type="text" class="form-control" aria-describedby="addon-wrapping"
+                                formControlName="cno" name="cno">
+                        </div>
+                        <div *ngIf="myForm.get('cno')!.touched && myForm.get('cno')!.invalid">
+                            <div *ngIf="myForm.get('cno')!.hasError('required')">
+                                <font color="red">Required</font>
+                            </div>
+                            <div *ngIf="myForm.get('cno')!.hasError('pattern')">
+                                <font color="red">Invalid</font>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="studentemsection">Catogory
+                            </label>
+                            <input type="text" class="form-control" aria-describedby="addon-wrapping"
+                                formControlName="catogory" name=" catogory">
+                        </div>
+                        <div *ngIf="myForm.get('catogory')!.touched && myForm.get('catogory')!.invalid">
+                            <div *ngIf="myForm.get('catogory')!.hasError('required')">
+                                <font color="red">catogory is Required</font>
+                            </div>
+                            <div *ngIf="myForm.get('catogory')!.hasError('pattern')">
+                                <font color="red">catogory invalid</font>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="studentemsection">Product
+                            </label>
+                            <input type="text" class="form-control" aria-describedby="addon-wrapping"
+                                formControlName="products" name="products">
+                        </div>
+                        <div *ngIf="myForm.get('products')!.touched && myForm.get('products')!.invalid">
+                            <div *ngIf="myForm.get('products')!.hasError('required')">
+                                <font color="red">Symbol is Required</font>
+                            </div>
+                            <div *ngIf="myForm.get('products')!.hasError('pattern')">
+                                <font color="red">Invalid Stock</font>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="studentemsection">Status
+                            </label>
+                            <input type="text" class="form-control" aria-describedby="addon-wrapping"
+                                formControlName="status" name="status">
+                        </div>
+                        <div *ngIf="myForm.get('status')!.touched && myForm.get('status')!.invalid">
+                            <div *ngIf="myForm.get('status')!.hasError('required')">
+                                <font color="red">Symbol is Required</font>
+                            </div>
+                            <div *ngIf="myForm.get('status')!.hasError('pattern')">
+                                <font color="red">Invalid Stock</font>
+                            </div>
+                        </div>
+
+                        <div class="form-group row" class="mb-3">
+                            <label for="studentemsection">Description
+                            </label>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" type="text"
+                                class="form-control" aria-describedby="addon-wrapping" formControlName="description"
+                                name="description"></textarea>
+                        </div>
+                        <br>
+                        <table width=50% id="J">
+                            <th><button type="button" class="btn btn-outline-dark"
+                                    (click)="InsertContract(myForm.value)" value="Insert">Insert</button></th>
+                            <th><button type="button" class="btn btn-outline-dark"
+                                    (click)="UpdateContract(myForm.value)">Update</button>
+                            </th>
+                            <th><button type="button" class="btn btn-outline-dark"
+                                    (click)="DeleteContract(myForm.value)">Delete</button></th>
+                            <th></th>
+                            <th></th>
+                            <button type="button" class="btn btn-outline-warning btn-large"><a class="nav-link"
+                                    routerLink="/front">Back...</a></button>
+                        </table>
+
+                    </div>
+                </form>
+
+        </table>
+
+    </div>
+</div>

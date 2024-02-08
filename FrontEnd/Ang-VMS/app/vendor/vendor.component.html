@@ -1,0 +1,141 @@
+<div class="card ">
+    <div class="card-header">
+        <h4 align="center">Add Vendor Details</h4>
+    </div>
+
+    <div class="card-body">
+        <form [formGroup]="myForm" id="Form">
+            <div class="inputs">
+
+
+
+                <label for="studentemsection">Vendor ID</label>
+                <input type="text" class="form-control mb-2" aria-describedby="addon-wrapping" formControlName="id"
+                    name="id">
+
+                <div *ngIf="myForm.get('id')!.touched && myForm.get('id')!.invalid">
+                    <div *ngIf="myForm.get('id')!.hasError('required')">
+
+                        <font color="red">Vendor ID is Required</font>
+                    </div>
+                    <div *ngIf="myForm.get('id')!.hasError('pattern')">
+
+                        <font color="red">Invalid Id</font>
+                    </div>
+                </div><br>
+
+                <label for="studentemsection">Vendor Name</label>
+                <input type="text" class="form-control" aria-describedby="addon-wrapping" formControlName="name"
+                    name="name">
+
+                <div *ngIf="myForm.get('name')!.touched && myForm.get('name')!.invalid">
+                    <div *ngIf="myForm.get('name')!.hasError('required')">
+                        <font color="red"> Name is Required</font>
+                    </div>
+                    <div *ngIf="myForm.get('name')!.hasError('pattern')">
+                        <font color="red">Invalid vendor Name </font>
+                    </div>
+                </div><br>
+
+                <label for="studentemsection">Country/Region
+                </label>
+                <input type="text" class="form-control" aria-describedby="addon-wrapping" formControlName="country"
+                    name="country">
+
+                <div *ngIf="myForm.get('country')!.touched && myForm.get('country')!.invalid">
+                    <div *ngIf="myForm.get('country')!.hasError('required')">
+                        <font color="red">country is Required</font>
+                    </div>
+                    <div *ngIf="myForm.get('country')!.hasError('pattern')">
+                        <font color="red">Invalid</font>
+                    </div>
+                </div><br>
+
+                <label for="studentemsection">Company
+                    Registration Number</label>
+                <input type="text" class="form-control" aria-describedby="addon-wrapping" formControlName="company"
+                    name="company">
+
+                <div *ngIf="myForm.get('company')!.touched && myForm.get('company')!.invalid">
+                    <div *ngIf="myForm.get('company')!.hasError('required')">
+                        <font color="red">Rno is Required</font>
+                    </div>
+                    <div *ngIf="myForm.get('company')!.hasError('pattern')">
+                        <font color="red">Invalid Rno</font>
+                    </div>
+                </div><br>
+
+                <label for="studentemsection">Stock Symbol
+                </label>
+                <input type="text" class="form-control" aria-describedby="addon-wrapping" formControlName="ssymbol"
+                    name="ssymbol">
+
+                <div *ngIf="myForm.get('ssymbol')!.touched && myForm.get('ssymbol')!.invalid">
+                    <div *ngIf="myForm.get('ssymbol')!.hasError('required')">
+                        <font color="red">Symbol is Required</font>
+                    </div>
+                    <div *ngIf="myForm.get('ssymbol')!.hasError('pattern')">
+                        <font color="red">Invalid Stock</font>
+                    </div>
+                </div><br>
+
+                <label for="studentemsection">RelationShip Since
+                </label>
+                <input type="text" class="form-control" aria-describedby="addon-wrapping"
+                    formControlName="realationship" name="realationship">
+
+                <div *ngIf="myForm.get('realationship')!.touched && myForm.get('realationship')!.invalid">
+                    <div *ngIf="myForm.get('realationship')!.hasError('required')">
+                        <font color="red">Required</font>
+                    </div>
+                    <div *ngIf="myForm.get('realationship')!.hasError('pattern')">
+                        <font color="red">Invalid</font>
+                    </div>
+                </div><br>
+
+                <label for="studentemsection">Customer
+                    Email</label>
+                <input type="text" class="form-control" aria-describedby="addon-wrapping" formControlName="email"
+                    name="email">
+
+                <div *ngIf="myForm.get('email')!.touched && myForm.get('email')!.invalid">
+                    <div *ngIf="myForm.get('email')!.hasError('required')">
+                        <font color="red">Required</font>
+                    </div>
+                    <div *ngIf="myForm.get('email')!.hasError('pattern')">
+                        <font color="red">Invalid</font>
+                    </div>
+                </div><br>
+
+                <label for="studentemsection">Vendor
+                    Mobile</label>
+                <input type="text" class="form-control" aria-describedby="addon-wrapping" formControlName="mobile"
+                    name="mobile">
+
+                <div *ngIf="myForm.get('mobile')!.touched && myForm.get('mobile')!.invalid">
+                    <div *ngIf="myForm.get('mobile')!.hasError('required')">
+                        <font color="red">Required</font>
+                    </div>
+                    <div *ngIf="myForm.get('mobile')!.hasError('pattern')">
+                        <font color="red">Invalid</font>
+                    </div>
+                </div>
+                <br>
+                <table width=50% id="J">
+                    <th><button type="button" class="btn btn-outline-dark" (click)="InsertVendor(myForm.value)"
+                            [disabled]="myForm.invalid">Insert</button></th>
+                    <th><button type="button" class="btn btn-outline-dark" (click)="UpdateVendor(myForm.value)"
+                            [disabled]="myForm.invalid">Update</button></th>
+                    <th><button type="button" class="btn btn-outline-dark"
+                            (click)="DeleteVendor(myForm.value)">Delete</button></th>
+                    <button type="button" class="btn btn-outline-warning btn-large"><a class="nav-link"
+                            routerLink="/front">Back...</a></button>
+                </table>
+
+
+
+
+            </div>
+        </form>
+    </div>
+</div>

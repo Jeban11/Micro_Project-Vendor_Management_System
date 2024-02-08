@@ -1,0 +1,49 @@
+img{
+    width: 10%;
+    height: 10%;
+  }
+  .container-fluid{
+    background-color: white;
+  
+  }
+  .row{
+    height: 90%;
+  }
+  .list-group{
+    height: 50%;
+  }
+  #jeb{
+    height: 40%;
+    width: 90%;
+  }
+  .navbar-brand {
+    font-size: 3.5rem;
+    font-weight: bold;
+  }
+  
+  .nav-link {
+    color: #141212;
+    padding: 0.5rem 1rem;
+  }
+  
+  .nav-link:hover {
+    color: #0d0202;
+  }
+  
+  .dropdown-menu {
+    background-color: #e9d9d9;
+  }
+  
+  .dropdown-item {
+    color: #171313;
+    padding: 0.5rem 1rem;
+  }
+  
+  .dropdown-item:hover {
+    background-color: #f4eded;
+  }
+  
+  img{
+    height: 95%;
+    
+}
