@@ -1,7 +1,7 @@
 export class Contract{
-    id!:number;
+    id!:Number;
     name!:String;
-    cno!:String;
+    cno!:string;
     catogory!:String;
     products!:String;
     status!:String;
